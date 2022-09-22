@@ -36,6 +36,7 @@ namespace LearningCSharp
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lRegister = new System.Windows.Forms.LinkLabel();
+            this.lDelete = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -105,11 +106,23 @@ namespace LearningCSharp
             this.lRegister.Text = "Register";
             this.lRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lRegister_LinkClicked);
             // 
+            // lDelete
+            // 
+            this.lDelete.AutoSize = true;
+            this.lDelete.Location = new System.Drawing.Point(134, 181);
+            this.lDelete.Name = "lDelete";
+            this.lDelete.Size = new System.Drawing.Size(53, 20);
+            this.lDelete.TabIndex = 7;
+            this.lDelete.TabStop = true;
+            this.lDelete.Text = "Delete";
+            this.lDelete.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lDelete_LinkClicked);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 241);
+            this.Controls.Add(this.lDelete);
             this.Controls.Add(this.lRegister);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -133,6 +146,7 @@ namespace LearningCSharp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel lRegister;
+        private System.Windows.Forms.LinkLabel lDelete;
     }
 }
 

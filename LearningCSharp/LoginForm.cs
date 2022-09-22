@@ -42,5 +42,10 @@ namespace LearningCSharp
         {
             (new UserRegister()).Show();
         }
+
+        private void lDelete_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            (new Delete()).Show();
+        }
     }
 }
