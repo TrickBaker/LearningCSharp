@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 
@@ -58,7 +59,24 @@ namespace LearningCSharp
             }
         }
 
-
+        public DataTable ExecuteReader()
+        {
+            try
+            {
+                sqlConnection.Open();
+                var dataReader = sqlCommand.ExecuteReader();
+                var dataTable = new DataTable();
+                dataTable.Load(dataReader);
+                sqlConnection.Close();
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+                throw;
+            }
+        }
 
     }
 }
